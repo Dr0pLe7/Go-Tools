@@ -1,0 +1,3 @@
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -gcflags=-trimpath=$GOPATH -asmflags=-trimpath=$GOPATH -ldflags "-w -s" -o fileopt main.go
+CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -gcflags=-trimpath=$GOPATH -asmflags=-trimpath=$GOPATH -ldflags "-w -s" -o fileopt.exe main.go
+CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -gcflags=-trimpath=$GOPATH -asmflags=-trimpath=$GOPATH -ldflags "-w -s" -o fileopt_darwin main.go
